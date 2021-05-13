@@ -5,6 +5,7 @@
   <!-- 如果是用mvn命令生成的xml，需要修改servlet版本为3.1 -->
   <!-- 配置DispatcherServlet -->
 
+  <!-- 配置DispatcherServlet -->
   <servlet>
     <servlet-name>seckill-dispatcher</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -17,10 +18,10 @@
       <param-value>classpath:spring/spring-*.xml</param-value>
     </init-param>
   </servlet>
-
   <servlet-mapping>
     <servlet-name>seckill-dispatcher</servlet-name>
     <!-- 默认匹配所有的请求 -->
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+
 </web-app>

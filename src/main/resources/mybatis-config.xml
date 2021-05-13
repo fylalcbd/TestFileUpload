@@ -8,7 +8,8 @@
         <!-- 使用jdbc的getGeneratedKeys获取数据库自增主键值 -->
         <setting name="useGeneratedKeys" value="true"/>
         <!-- 使用列别名替换列名 默认:true -->
-        <setting name="userColumnLabel" value="true"/>
+        <setting name="useColumnLabel" value="true" />
+
         <!-- 启用驼峰命名法-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
