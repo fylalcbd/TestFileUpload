@@ -8,7 +8,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/jsp/includes.jsp" %>
-<jsp:include page="/WEB-INF/jsp/head.jsp">
+<jsp:include page="/WEB-INF/jsp/UserManager/head.jsp">
     <jsp:param name="pageName" value="articleList"/>
 </jsp:include>
 

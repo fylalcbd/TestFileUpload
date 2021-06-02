@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/jsp/includes.jsp" %>
-<%@ include file="/WEB-INF/jsp/head.jsp" %>
+<%@ include file="/WEB-INF/jsp/UserManager/head.jsp" %>
 <div class="right_col" role="main">
     <div class="">
         <div class="page-title">
@@ -59,10 +59,10 @@
 </footer>
 </div>
 </div>
-<script src="${pageContext.request.contextPath}/static/bootstrap/jquery-2.1.4.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.js"></script>
-<script src="${pageContext.request.contextPath}/static/frame/gentelella/js/custom-msms.js"></script>
+<script src="${pageContext.request.contextPath}/statics/bootstrap-3.3.7-dist/jquery-2.1.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/statics/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/statics/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/statics/frame/gentelella/js/custom-msms.js"></script>
 
 
 </body>
