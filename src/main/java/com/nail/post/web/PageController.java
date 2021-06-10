@@ -8,9 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PageController {
 
 
-    //首页页面跳转
-    @RequestMapping("/head")
-    public String toHeadpage(){
+
+
+    //注册页面跳转
+    @RequestMapping("/page/register")
+    public String toRegister(){
+        return "register";
+    }
+    //登陆成功后首页跳转
+    @RequestMapping("/page/head")
+    public String toHead(){
         return "UserManager/head";
     }
 }

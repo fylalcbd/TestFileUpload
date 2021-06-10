@@ -11,26 +11,24 @@
 <html>
 
 <head>
-    <title>蜗牛之家打卡系统</title>
+    <title>oursnail</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     <!-- CSS Libs -->
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/lib/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/lib/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/lib/css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/lib/css/bootstrap-switch.min.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/lib/css/checkbox3.min.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/lib/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/lib/css/dataTables.bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/lib/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/lib/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/lib/css/checkbox3.min.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/lib/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/lib/css/select2.min.css">
     <!-- CSS App -->
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/css/style.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/statics/css/themes/flat-blue.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/statics/head/css/themes/flat-blue.css">
 </head>
-
-
 
 <body class="flat-blue">
 <div class="app-container">
@@ -42,7 +40,7 @@
                         <i class="fa fa-bars icon"></i>
                     </button>
                     <ol class="breadcrumb navbar-breadcrumb">
-                        <li class="active"></li>
+                        <li class="active">详情</li>
                     </ol>
                     <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
                         <i class="fa fa-th icon"></i>
@@ -122,30 +120,49 @@
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">
                             <div class="icon fa fa-paper-plane"></div>
-                            <div class="title">Nail Admin</div>
+                            <div class="title">蜗牛之家打卡系统</div>
                         </a>
                         <button type="button" class="navbar-expand-toggle pull-right visible-xs">
                             <i class="fa fa-times icon"></i>
                         </button>
                     </div>
                     <ul class="nav navbar-nav">
-                        <%--<li class="active">
+                        <li class="active">
                             <a href="index.html">
-                                <span class="icon fa fa-tachometer"></span><span class="title">Dashboard</span>
+                                <span class="icon fa fa-tachometer"></span><span class="title">移动鼠标</span>
                             </a>
-                        </li>--%>
+                        </li>
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element">
-                                <span class="icon fa fa-desktop"></span><span class="title">用户管理</span>
+                                <span class="icon fa fa-desktop"></span><span class="title">用户</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-element" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul class="nav navbar-nav">
-
-                                        <li><a href="ui-kits/step.html">用户添加</a>
+                                        <li><a href="ui-kits/theming.html">用户列表</a>
                                         </li>
-                                        <li><a href="${pageContext.request.contextPath}/userManager/userList">用户列表</a>
+
+                                        <li><a href="ui-kits/theming.html">用户信息</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="panel panel-default dropdown">
+                            <a data-toggle="collapse" href="#dropdown-table">
+                                <span class="icon fa fa-table"></span><span class="title">打卡信息</span>
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-table" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="table/table.html">已打卡</a>
+                                        </li>
+                                        <li><a href="table/datatable.html">异常统计</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -157,43 +174,32 @@
                 <!-- /.navbar-collapse -->
             </nav>
         </div>
-        <div class="copyrights">Collect from <a href="" >蜗牛之家打卡系统</a></div>
+        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >免费网站模板</a></div>
         <!-- Main Content -->
-        <div class="container-fluid">
-            <div class="side-body padding-top">
-                <div class="row">
-                        哈哈哈
-                </div>
 
-            </div>
         </div>
     </div>
     <footer class="app-footer">
         <div class="wrapper">
-            <span class="pull-right">2.1 <a href="#"><i class="fa fa-long-arrow-up"></i></a></span> © 2017 Copyright. More Templates <a href="" target="_blank" title="蜗牛之家">蜗牛之家</a> - Collect from <a href="" title="蜗牛之家" target="_blank">管理系统</a>
+            <span class="pull-right">2.1 <a href="#"><i class="fa fa-long-arrow-up"></i></a></span> © 2015 Copyright. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
         </div>
     </footer>
-
-
-
-</body>
     <div>
-
         <!-- Javascript Libs -->
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/jquery.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/Chart.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/bootstrap-switch.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/jquery.matchHeight-min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/dataTables.bootstrap.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/select2.full.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/ace/ace.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/ace/mode-html.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/lib/js/ace/theme-github.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/Chart.min.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/bootstrap-switch.min.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/select2.full.min.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/ace/ace.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/ace/mode-html.js"></script>
+        <script type="text/javascript" src="/statics/head/lib/js/ace/theme-github.js"></script>
         <!-- Javascript -->
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/app.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/index.js"></script>
-    </div>
-</html>
+        <script type="text/javascript" src="/statics/head/js/app.js"></script>
+        <script type="text/javascript" src="/statics/head/js/index.js"></script>
+</body>
 
+</html>

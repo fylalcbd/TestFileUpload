@@ -1,108 +1,106 @@
-
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Minimal and Clean Sign up / Login and Forgot Form by FreeHTML5.co</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FreeHTML5.co" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	
-
-  
-
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-	
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/style.css">
-
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<ul class="menu">
-						<li class="active"><a href="index.html">Style 1</a></li>
-						<li><a href="index2.html">Style 2</a></li>
-						<li><a href="index3.html">Style 3</a></li>
-					</ul>
-				</div>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>登录淘淘</title>
+    <link type="text/css" rel="stylesheet" href="/statics/css/login.css"/>
+    <script type="text/javascript" src="/statics/js/jquery-1.6.4.js"></script>
+</head>
+<body>
+<div class="w">
+    <div id="logo">
+    	<a href="http://www.taotao.com" clstag="passport|keycount|login|01">
+    		<img src="/statics/images/taotao-logo.gif" alt="淘淘" width="170" height="60"/>
+    	</a><b></b>
+   	</div>
+</div>
+<form id="formlogin" method="post" onsubmit="return false;">
+    <div class=" w1" id="entry">
+        <div class="mc " id="bgDiv">
+            <div id="entry-bg" clstag="passport|keycount|login|02" style="width: 511px; height: 455px; position: absolute; left: -44px; top: -44px; background: url(/images/544a11d3Na5a3d566.png) 0px 0px no-repeat;">
 			</div>
-            <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
-			<div class="row">
-				<div class="col-md-4 col-md-offset-4">
-					
-
-					<!-- Start Sign In Form -->
-					<form action="#" class="fh5co-form animate-box" data-animate-effect="fadeIn">
-						<h2>Sign In</h2>
-						<div class="form-group">
-							<label for="username" class="sr-only">Username</label>
-							<input type="text" class="form-control" id="username" placeholder="Username" autocomplete="off">
-						</div>
-						<div class="form-group">
-							<label for="password" class="sr-only">Password</label>
-							<input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off">
-						</div>
-						<div class="form-group">
-							<label for="remember"><input type="checkbox" id="remember"> Remember Me</label>
-						</div>
-						<div class="form-group">
-							<p>Not registered? <a href="sign-up.jsp">Sign Up</a> | <a href="forgot.html">Forgot Password?</a></p>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Sign In" class="btn btn-primary">
-						</div>
-					</form>
-					<!-- END Sign In Form -->
-
-				</div>
-			</div>
-			<div class="row" style="padding-top: 60px; clear: both;">
-				<div class="col-md-12 text-center"><p><small>&copy; All Rights Reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></small></p></div>
-			</div>
-		</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Placeholder -->
-	<script src="js/jquery.placeholder.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Main JS -->
-	<script src="js/main.js"></script>
-
-
-	</body>
+            <div class="form ">
+                <div class="item fore1">
+                    <span>用户名</span>
+                    <div class="item-ifo">
+                        <input type="text" id="loginname" name="username" class="text"  tabindex="1" autocomplete="off"/>
+                        <div class="i-name ico"></div>
+                        <label id="loginname_succeed" class="blank invisible"></label>
+                        <label id="loginname_error" class="hide"><b></b></label>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    setTimeout(function () {
+                        if (!$("#loginname").val()) {
+                            $("#loginname").get(0).focus();
+                        }
+                    }, 0);
+                </script>
+                <div id="capslock"><i></i><s></s>键盘大写锁定已打开，请注意大小写</div>
+                <div class="item fore2">
+                    <span>密码</span>
+                    <div class="item-ifo">
+                        <input type="password" id="nloginpwd" name="password" class="text" tabindex="2" autocomplete="off"/>
+                        <div class="i-pass ico"></div>
+                        <label id="loginpwd_succeed" class="blank invisible"></label>
+                        <label id="loginpwd_error" class="hide"></label>
+                    </div>
+                </div>
+                <div class="item login-btn2013">
+                    <input type="button" class="btn-img btn-entry" id="loginsubmit" value="登录" tabindex="8" clstag="passport|keycount|login|06"/>
+                </div>
+            </div>
+        </div>
+        <div class="free-regist">
+            <span><a href="/page/register" clstag="passport|keycount|login|08">免费注册&gt;&gt;</a></span>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+	var redirectUrl = "${redirect}";
+	var LOGIN = {
+			checkInput:function() {
+				if ($("#loginname").val() == "") {
+					alert("用户名不能为空");
+					$("#loginname").focus();
+					return false;
+				}
+				if ($("#nloginpwd").val() == "") {
+					alert("密码不能为空");
+					$("#nloginpwd").focus();
+					return false;
+				}
+				return true;
+			},
+			doLogin:function() {
+				$.post("/userManager/login", $("#formlogin").serialize(),function(data){
+					if (data.code == 200) {
+						alert("登录成功！");
+						if (redirectUrl == "") {
+							location.href = "/page/head";
+						} else {
+							location.href = redirectUrl;
+						}
+					} else {
+						alert("登录失败，原因是：" + data.msg);
+						$("#loginname").select();
+					}
+				});
+			},
+			login:function() {
+				if (this.checkInput()) {
+					this.doLogin();
+				}
+			}
+		
+	};
+	$(function(){
+		$("#loginsubmit").click(function(){
+			LOGIN.login();
+		});
+	});
+</script>
+</body>
 </html>
-

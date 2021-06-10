@@ -93,9 +93,11 @@
         -->
         <property name="filterChainDefinitions">
             <value>
-                /welcome.jsp = anon
+                /login.jsp = anon
+                /jsp/register.jsp = anon
                 /statics/** = anon
                 /userManager/login = anon
+                /page/register = anon
                 /register/** = anon
 
 

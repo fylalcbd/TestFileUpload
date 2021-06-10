@@ -3,6 +3,7 @@ package com.nail.post.web;
 import com.nail.post.entity.Result;
 import com.nail.post.entity.User;
 import com.nail.post.service.UserService;
+import com.nail.post.utils.ResultUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -48,7 +49,8 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(User user){
+    @ResponseBody
+    public Result<User> login(User user){
         System.out.println("+++++++++++++user"+user);
 
         Subject currentUser = SecurityUtils.getSubject();
@@ -71,10 +73,10 @@ public class UserController {
             catch (AuthenticationException ae) {
                 //unexpected condition?  error?
                 System.out.println("登录失败！" + ae.getMessage());
-                return "redirect:/welcome";
+                return ResultUtils.failure("密码或用户名错误！",400);
             }
         }
-        return "UserManager/head";
+        return ResultUtils.success();
 
     }
 
