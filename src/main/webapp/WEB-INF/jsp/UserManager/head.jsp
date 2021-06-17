@@ -129,7 +129,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active">
                             <a href="index.html">
-                                <span class="icon fa fa-tachometer"></span><span class="title">移动鼠标</span>
+                                <span class="icon fa fa-tachometer"></span><span class="title">签到</span>
                             </a>
                         </li>
                         <li class="panel panel-default dropdown">

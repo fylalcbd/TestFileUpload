@@ -81,7 +81,7 @@
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
         <!--  登陆成功页面-->
-        <property name="loginUrl" value="login.jsp"/>
+        <property name="loginUrl" value="/jsp/login.jsp"/>
 
         <property name="successUrl" value="/WEB-INF/jsp/UserManager/head.jsp"/>
         <property name="unauthorizedUrl" value="/WEB-INF/jsp/UserManager/*.jsp"/>
@@ -99,6 +99,7 @@
                 /userManager/login = anon
                 /page/register = anon
                 /register/** = anon
+                /page/login = anon
 
 
                 # everything else requires authentication:

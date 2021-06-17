@@ -13,11 +13,11 @@
 </head>
 <body>
 <div class="w" id="logo">
-    <div>
+   <%-- <div>
     	<a href="http://www.taotao.com">
     		<img src="/images/taotao-logo.gif" alt="淘淘商城" width="170" height="60"/>
     	</a> <b></b>
-    </div>
+    </div>--%>
 </div>
 
 <div class="w" id="regist">
@@ -52,17 +52,29 @@
                     </div>
                 </div>
 
-                    <div class="item">
+                 <%--   <div class="item">
                         <span class="label"><b class="ftx04">*</b>请设置密码：</span>
 
                         <div class="fl item-ifo">
                             <input type="password" id="pwd" name="password" class="text" tabindex="2"
-                                   style="ime-mode:disabled;"
+                                   &lt;%&ndash;style="ime-mode:disabled;"&ndash;%&gt;
                                    onpaste="return  false" autocomplete="off"/>
                             <i class="i-pass"></i>
                             <label id="pwd_succeed" class="blank"></label>
                             <label id="pwd_error"></label>
                             <span class="clr"></span>
+                        </div>
+                    </div>--%>
+                    <div class="item">
+                        <span class="label"><b class="ftx04">*</b>请设置密码：</span>
+
+                        <div class="fl item-ifo">
+
+                            <input type="password" id="pwd" name="password" class="text" tabindex="3"
+                                   onpaste="return  false" autocomplete="off"/>
+                            <i class="i-pass"></i>
+                            <label id="pwd_succeed" class="blank"></label>
+                            <label id="pwd_error"></label>
                         </div>
                     </div>
 
@@ -70,36 +82,37 @@
                         <span class="label"><b class="ftx04">*</b>请确认密码：</span>
 
                         <div class="fl item-ifo">
-                            <input type="password" id="pwdRepeat" name="pwdRepeat" class="text" tabindex="3"
+                            <input type="password" id="pwdRepeat" name="password" class="text" tabindex="3"
                                    onpaste="return  false" autocomplete="off"/>
                             <i class="i-pass"></i>
                             <label id="pwdRepeat_succeed" class="blank"></label>
                             <label id="pwdRepeat_error"></label>
                         </div>
                     </div>
+
 					<div class="item" id="dphone">
 						<span class="label"><b class="ftx04">*</b>邮箱：</span>
 
 						<div class="fl item-ifo">
-							<input type="text" id="email" maxlength="11" name="email"
+							<input type="text" id="email" maxlength="40" name="email"
 								class="text" tabindex="4"
 								autocomplete="off" /> <i class="i-email"></i> <label
 								id="email_succeed" class="blank"></label> <label
 								id="email_error"></label>
 						</div>
 					</div>
-					</div>
-                <div class="item item-new">
+
+              <%--  <div class="item item-new">
                     <span class="label">&nbsp;</span>
 
-                    <div class="fl item-ifo">
+                   &lt;%&ndash; <div class="fl item-ifo">
                         <input type="checkbox" class="checkbox" checked="checked" id="readme"
                                onclick="agreeonProtocol();">
-                        <label for="protocol">我已阅读并同意<a href="#" class="blue" id="protocol">《淘淘用户注册协议》</a></label>
+                        <label for="protocol">我已阅读并同意<a href="#" class="blue" id="protocol">《蜗牛用户注册协议》</a></label>
                         <span class="clr"></span>
                         <label id="protocol_error" class="error hide">请接受服务条款</label>
-                    </div>
-                </div>
+                    </div>&ndash;%&gt;
+                </div>--%>
                 <div class="item">
                     <span class="label">&nbsp;</span>
                     <input type="button" class="btn-img btn-regist" id="registsubmit" value="立即注册" tabindex="8"
@@ -107,10 +120,10 @@
                            onclick="REGISTER.reg();"/>
                 </div>
             </div>
-           <%-- <div class="email">
+            <%--<div class="email">
                 <img width="180" height="180" src="/images/-bg.jpg">
-            </div>--%>
-            <span class="clr"></span>
+            </div>
+            <span class="clr"></span>--%>
         </form>
     </div>
 <script type="text/javascript">
@@ -148,14 +161,14 @@
 		beforeSubmit:function() {
 				//检查用户是否已经被占用
 				$.ajax({
-	            	url : REGISTER.param.surl + "/register/check/"+escape($("#regName").val())+"/1?r=" + Math.random(),
+	            	url : "/register/check/"+escape($("#regName").val())+"/1?r=" + Math.random(),
 	            	success : function(data) {
-	            		if (data.data) {
+	            		if (data.code==200) {
 	            			//检查手机号是否存在
 	            			$.ajax({
 	            				url : REGISTER.param.surl + "/register/check/"+$("#email").val()+"/2?r=" + Math.random(),
 				            	success : function(data) {
-				            		if (data.data) {
+				            		if (data.code) {
 					            		REGISTER.doSubmit();
 				            		} else {
 				            			alert("此邮箱已经被注册！");

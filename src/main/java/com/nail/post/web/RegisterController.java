@@ -23,16 +23,18 @@ public class RegisterController {
     @RequestMapping("/check/{param}/{type}")
     @ResponseBody
     public Result<User> inputCheck(@PathVariable("param") String param,@PathVariable("type") Integer type){
-
+        System.out.println("((((((((((((((((((((((((");
         Result<User> result = registerService.check(param,type);
 
         return result;
     }
+
+
     //("/register/register",$("#registerForm").serialize()
     @ResponseBody
     @RequestMapping(value = "/register",method = RequestMethod.POST)
    public Result<User> register(User user){
-
+        System.out.printf("+++++++++++"+user);
         Result<User> result = registerService.register(user);
         return result;
    }
